@@ -30,14 +30,12 @@
           <button
             v-show="!expandSearch"
             class="w-full text-primary hover:text-accent-hover text-sm uppercase border-2 border-primary hover:border-accent-hover border-dotted py-2 px-4"
-            @click="onMenuClick"
           >
             Platforma dna
           </button>
         </div>
         <button
           class="uppercase text-primary hover:text-accent-hover transition-colors text-base"
-          @click="onMenuClick"
         >
           eng
         </button>
