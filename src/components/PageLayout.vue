@@ -4,6 +4,7 @@
     <div class="max-w-screen-lg mx-auto md:grid grid-cols-12 relative">
       <!-- Dashed background -->
       <div
+        v-if="route.name == 'home'"
         class="hidden lg:inline absolute -left-[20px] -top-[210px] h-[200px] w-auto aspect-square bg-accent-hover z-50"
         style="
           background: repeating-linear-gradient(
@@ -37,9 +38,12 @@
 </template>
 
 <script setup lang="ts">
+  import { useRoute } from "vue-router";
   import Footer from "./Footer.vue";
   import Header from "./Header.vue";
   import SideLink from "./item/SideLink.vue";
+
+  const route = useRoute();
 
   const { headerTitle } = defineProps<{
     headerTitle?: string;
