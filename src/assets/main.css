@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Verb";
+    font-style: normal;
+    font-weight: normal;
+    src: url("@/assets/fonts/Verb/Verb-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Verb";
+    font-style: normal;
+    font-weight: bold;
+    src: url("@/assets/fonts/Verb/Verb-Ultra.woff2") format("woff2");
+  }
+}
+
+@layer utilities {
+  .link-title {
+    @apply text-sm uppercase text-primary hover:text-accent-hover font-ultra-bold transition-colors;
+  }
+
+  .link-footer {
+    @apply text-sm text-primary hover:text-accent-hover hover:underline;
+  }
+
+  .rte a {
+    @apply text-xl text-primary hover:text-accent-hover hover:underline;
+  }
+
+  .rte h1 {
+    @apply text-accent-hover text-2xl/6 lg:text-3xl/8 font-ultra-bold my-4;
+  }
+
+  .rte h2 {
+    @apply text-primary text-2xl/6 lg:text-3xl/7 my-4;
+  }
+
+  .rte h3 {
+    @apply text-accent-placeholder text-2xl/6 lg:text-3xl/7 my-4 font-georgia;
+  }
+
+  .rte p {
+    @apply text-secondary text-xl/7 my-4 font-georgia;
+  }
+
+  .rte .note {
+    @apply text-accent-hover text-base/6;
+  }
+
+  .rte ul {
+    @apply pl-4 list-disc font-georgia;
+  }
+
+  .rte li {
+    @apply text-secondary text-xl/7;
+  }
+
+  .rte li::marker {
+    @apply text-primary;
+  }
+
+  .rte img {
+    @apply w-full h-auto aspect-video inline-block object-cover mt-4;
+  }
+
+  .rte blockquote {
+    @apply text-accent-warning text-2xl/8 border-l-[5px] border-[#D8D7D3] px-6 py-3;
+  }
+
+  .rte blockquote > .quote {
+    @apply text-9xl;
+  }
+}
